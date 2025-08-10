@@ -1,0 +1,9 @@
+body{
+    background-color: #fff8dc;
+}
+.admin{
+    display: flex;
+    gap: 20px;
+    
+    /* flex-direction: column; */
+}

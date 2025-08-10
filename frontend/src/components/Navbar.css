@@ -1,0 +1,164 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.brand-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 0.2rem 1rem;
+  background-color: white;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  width: 300px;
+}
+
+.search-icon {
+  color: #555;
+  margin-left: 0.5rem;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+.action-item {
+  position: relative;
+  margin-left: 1.5rem;
+}
+
+.action-link {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.action-icon, .order-icon {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.order-icon{
+  width: 30px;
+  height: 30px;
+}
+
+.action-count {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  background-color: #dc3545;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 50%;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+
+.username {
+  margin-right: 0.5rem;
+  font-weight: 500;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.login-button {
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin-left: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.login-button svg {
+  margin-right: 0.5rem;
+}
+.fav-count{
+  color: #dc3545;
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .navbar-actions {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+
+  .action-item {
+    margin-left: 1rem;
+  }
+
+  .user-profile {
+    margin-left: 1rem;
+  }
+
+  .login-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    margin-left: 1rem;
+  }
+
+  .action-count {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.3rem;
+  }
+
+  .order-icon {
+    width: 25px;
+    height: 25px;
+  }
+}

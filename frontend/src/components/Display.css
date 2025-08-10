@@ -1,0 +1,265 @@
+/* Overall Display Styling */
+.display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Product Card */
+.item_display {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    width: 230px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeSlideIn 0.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.item_display:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Container */
+.image_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px; /* Added for better spacing */
+}
+
+.product_img {
+    width: 110px;
+    height: 110px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item_display:hover .product_img {
+    transform: scale(1.08);
+    box-shadow: 0 5px 15px rgba(255, 165, 0, 0.3);
+}
+
+/* Wishlist Heart */
+.heart {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.heart img {
+    width: 28px;
+    height: 28px;
+}
+
+.heart:hover {
+    transform: scale(1.15);
+}
+
+.heart_active {
+    animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Product Info */
+.product_name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #333;
+}
+
+.product_weight {
+    font-size: 14px;
+    color: #777;
+}
+
+.product_price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d9534f;
+    margin-bottom: 35px;
+}
+
+/* Quantity & Cart Buttons */
+.display_button {
+    display: flex;
+    /* bottom: 1px; */
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 1px;
+    /* margin-top: 12px; */
+    background: rgba(255, 255, 255, 0.3);
+    padding: 5px;
+    border-radius: 10px;
+    width: 80px;
+}
+
+/* Quantity Display */
+.qty_display {
+    font-size: 16px;
+    font-weight: bold;
+    width: 40px;
+    text-align: center;
+    color: #222;
+}
+
+/* Buttons */
+/* .btn {
+    border: none;
+    height: 32px;
+    width: 32px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+    /* font-weight: bold; 
+} */
+
+/* .btn:hover {
+    transform: scale(1.1);
+}
+
+.btn:active {
+    transform: scale(0.95);
+} */
+
+/* Decrease Button */
+.nav {
+    
+    background: #ff7676;
+    color: white;
+    margin-left: -5px;
+    box-shadow: 0 2px 5px rgba(255, 0, 0, 0.3);
+    /* margin-left: -5px; */
+}
+
+.nav:hover {
+    background: #ff4545;
+    
+}
+
+/* Increase Button */
+.pos {
+    background: #7dd87d;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 255, 0, 0.3);
+}
+
+.pos:hover {
+    background: #5ac45a;
+}
+.floating_cart{
+    position: fixed;
+    bottom: 20px;
+    right: -60px;
+    background: orange;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.floating_cart:hover{
+    transform: scale(1.1);
+}
+.show_cart{
+    right: 20px;
+}
+.cart_count {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    /* background: red; */
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 4px 6px;
+    border-radius: 50%;
+}
+@media (max-width: 768px) {
+    .login-form {
+      width: 90%;
+      max-width: 330px;
+      padding: 20px;
+      gap: 20px;
+    }
+  
+    .login-form-title input {
+      width: 100%;
+    }
+  
+    .login-form button {
+      width: 100%;
+    }
+  
+    .display {
+      flex-direction: row;
+      gap: 15px;
+      padding: 10px;
+    }
+  
+    .item_display {
+      width: 90%;
+      max-width: 160px;
+      padding: 10px;
+    }
+  
+    .product_img {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .floating_cart {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      bottom: 10px;
+      right: 10px;
+    }
+  
+    .display_button {
+      width: 70px;
+      
+    }
+  
+    .qty_display {
+      font-size: 14px;
+    }
+  }

@@ -1,0 +1,242 @@
+.cart {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+.cartheader {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr 0.6fr 0.6fr 0.6fr 0.6fr;
+    align-items: center;
+    padding: 12px 0;
+    font-weight: bold;
+    gap: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+.cartheader img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cartheader button {
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background: #ffffff;
+    color: black;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* .cartheader button:hover {
+    background: #d93636;
+} */
+
+.bail{
+    /* margin-left: 800px; */
+    margin-top: 200px;
+    /* background-color: aqua; */
+    /* border: 3px solid; */
+    width: 300px;
+}
+.bail .aaa{
+    margin-left: 30px;
+    width: 150px;
+    height: 40px;
+    border-radius: 5%;
+    border: 0px;
+    background-color: tomato;
+    color: white;
+    /* margin-top: 20px; */
+}
+.bail .aaaa{
+    margin-left: 30px;
+    width: 150px;
+    height: 40px;
+    border-radius: 5%;
+    border: 0px;
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+    /* margin-top: 20px; */
+}
+.bail .tip{
+    width: 20px;
+    height: 20px;
+    background-color: tomato;
+    border: none;
+    color: white;
+}
+.bail .notip{
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    border: none;
+    color: white;
+    border-radius: 5%;
+    /* margin-top: 5px; */
+
+}
+.bail span{
+    margin-left: 30px;
+    align-items: end;
+}
+.bail p{
+    /* border: 3px solid; */
+    margin-top: 0px;
+}
+.cart-total-details{
+    display: flex;
+    justify-content:space-between;
+}
+.value-bail{
+    margin-right: 34px;
+}
+.tipnumber span{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    margin-top: -30px;
+    margin-left: 30px;
+}
+.place-order{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 100px;
+}
+.place-order-left{
+    width: 100%;
+    max-width: max(30%,500px);
+}
+.place-order-left .title{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+.place-order-left input{
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    outline-color: tomato;
+}
+.place-order-left .multi-fields{
+    display: flex;
+    gap: 10px;
+}
+.bail-place-order{
+    display: flex;
+    justify-content: space-around;
+    /* border: 3px solid; */
+    height: 600px;
+}
+.bail-place-order form{
+    /* background-color: aqua; */
+    /* width: 300px; */
+    margin-left: 30px;
+}
+@media (max-width: 768px) {
+    .login-form {
+      width: 90%;
+      max-width: 330px;
+      padding: 20px;
+      gap: 20px;
+    }
+  
+    .login-form-title input {
+      width: 100%;
+    }
+  
+    .login-form button {
+      width: 100%;
+    }
+  
+    .display {
+      flex-direction: column;
+      gap: 15px;
+      padding: 10px;
+    }
+  
+    .item_display {
+      width: 90%;
+      max-width: 250px;
+      padding: 10px;
+    }
+  
+    .product_img {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .floating_cart {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      bottom: 10px;
+      right: 10px;
+    }
+  
+    .display_button {
+      width: 70px;
+    }
+  
+    .qty_display {
+      font-size: 14px;
+    }
+  
+    .cart {
+      width: 95%;
+      margin: 20px auto;
+      padding: 15px;
+    }
+  
+    .cartheader {
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      font-size: 14px;
+      padding: 10px 0;
+    }
+  
+    .cartheader img {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .cart-total-details {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .place-order {
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 50px;
+    }
+  
+    .place-order-left {
+      max-width: 100%;
+    }
+  
+    .place-order-left .title {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+  
+    .bail-place-order {
+      flex-direction: column;
+      height: auto;
+    }
+  }

@@ -1,0 +1,204 @@
+
+.addproduct {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin-top: 2rem;
+    margin-left: 280px;
+    padding: 2rem;
+    background-color: #fff8dc;
+    border-radius: 16px;
+    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); */
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .addproduct-itemfield {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 1rem;
+  }
+  .addproduct-itemfield-measurement {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+
+  }
+  .addproduct-itemfield-measurement input{
+    padding: 0.75rem;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    margin-left: 40px;
+  }
+  .addproduct-itemfield-measurement select{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    height: 44px;
+    
+  }
+  
+  .addproduct-itemfield p, .addproduct-itemfield-measurement p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    margin: 0;
+  }
+  
+  .addproduct-itemfield input,
+  .addproduct-itemfield select {
+    padding: 0.75rem;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .addproduct-itemfield input:focus,
+  .addproduct-itemfield select:focus {
+    border-color: #5a67d8;
+    box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.3);
+  }
+  
+  .addproduct-itemfield input[type="file"] {
+    padding: 0;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .addproduct-itemfield .weight {
+    width: 100%;
+  }
+  
+  .addproduct-itemfield select {
+    width: 100%;
+  }
+  
+  .addproduct {
+    grid-gap: 1rem;
+  }
+  
+  .addproduct-itemfield:last-child {
+    margin-bottom: 0;
+  }
+
+  .addproduct img{
+    max-width: 200px;
+    height: 150px;
+     border-radius: 8px;
+  border: 2px solid #ddd;
+  }
+  .addproduct button{
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: large;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
+    background-color: #007bff;
+  }
+  .addproduct button:hover{
+    background-color: #076dda;
+  }
+  .addproduct button:active{
+    background-color: #007bff;
+  }
+  
+
+   /* Improved AddProduct.css */
+
+/* .addproduct {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.addproduct-itemfield, .addproduct-itemfield-measurement {
+  display: flex;
+  flex-direction: column;
+}
+
+.addproduct-itemfield p, .addproduct-itemfield-measurement p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.addproduct-itemfield input,
+.addproduct-itemfield select {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+}
+
+.addproduct-itemfield input:focus,
+.addproduct-itemfield select:focus {
+  border-color: #5a67d8;
+  box-shadow: 0 0 5px rgba(90, 103, 216, 0.5);
+}
+
+.addproduct-itemfield-measurement {
+  display: flex;
+  gap: 10px;
+}
+
+.addproduct-itemfield-measurement input,
+.addproduct-itemfield-measurement select {
+  flex: 1;
+}
+
+.addproduct-itemfield input[type="file"] {
+  padding: 0;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.addproduct img {
+  width: 100%;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+}
+
+button {
+  background: #5a67d8;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #434190;
+} */
+
+

@@ -1,0 +1,127 @@
+.favourite-container {
+    display: flex;
+    flex-direction: row;  /* Items align in a row */
+    flex-wrap: wrap;      /* Allows items to wrap */
+    justify-content: center; /* Centers items in the container */
+    align-items: flex-start; /* Aligns items at the top */
+    padding: 20px;
+    gap: 15px; /* Adds spacing between items */
+    margin-top: 50px;
+}
+
+
+.empty-wishlist {
+    text-align: center;
+    color: #555;
+    margin-top: 20px;
+}
+
+.empty-wishlist h3 {
+    font-size: 24px;
+    color: #333;
+}
+.wishlist{
+    text-align: center;
+}
+
+.empty-wishlist p {
+    font-size: 16px;
+    color: #777;
+}
+
+.item_display{
+    align-items: center;
+    width: 200px;
+    /* border: 3px solid black; */
+    text-align: center;
+}.item_display:hover{
+    /* background-color: rgb(171, 173, 173); */
+    transform: scale(1.05); 
+}
+/* .item_display img{
+    border: 3px solid black;
+} */
+.display_button{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    height: 30px;
+    /* border: 3px solid black; */
+    background-color: rgb(230, 229, 227);
+    width: 80px;
+    margin-left: 50px;
+    cursor: default;
+   
+    
+    /* border-radius: 10%; */
+   
+}
+.display_button p{
+    width: 50px;
+    height: 25px;
+    margin: 5px;
+    /* background-color: wheat; */
+    text-align: cente;
+    cursor: default;
+    
+    /* border: 3px solid black; */
+}
+.display_button button{
+    height: 38px;
+    width: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    /* margin: 0px -20px; */
+}
+.nev{
+    background-color: rgb(247, 167, 167);
+    margin-left: -10px;
+}
+.pos{
+    
+    background-color: rgb(159, 235, 149);
+    margin-right: -10px;
+}
+.nev:hover{
+    transform: scale(1.05); 
+}
+.pos:hover{
+    transform: scale(1.05); 
+}
+.pos:active{
+    background-color: rgb(102, 235, 84);
+}
+.nev:active{
+    background-color: rgb(247, 95, 95);
+}
+.pos:active{
+    background-color: rgb(102, 235, 84);
+}
+
+.heart {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.heart img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.heart img:hover {
+    transform: scale(1.1);
+}
+.fav_price{
+    font-size: 18px;
+    font-weight: bold;
+    color: #d9534f;
+    margin-bottom: 40px;
+}
+.fav_weight {
+    font-size: 14px;
+    color: #777;
+}
