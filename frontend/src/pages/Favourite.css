@@ -1,11 +1,11 @@
 .favourite-container {
     display: flex;
-    flex-direction: row;  /* Items align in a row */
-    flex-wrap: wrap;      /* Allows items to wrap */
-    justify-content: center; /* Centers items in the container */
-    align-items: flex-start; /* Aligns items at the top */
+    flex-direction: row;  
+    flex-wrap: wrap;     
+    justify-content: center; 
+    align-items: flex-start; 
     padding: 20px;
-    gap: 15px; /* Adds spacing between items */
+    gap: 15px; 
     margin-top: 50px;
 }
 
@@ -32,39 +32,26 @@
 .item_display{
     align-items: center;
     width: 200px;
-    /* border: 3px solid black; */
     text-align: center;
 }.item_display:hover{
-    /* background-color: rgb(171, 173, 173); */
     transform: scale(1.05); 
 }
-/* .item_display img{
-    border: 3px solid black;
-} */
 .display_button{
     display: flex;
     flex-direction: row;
     justify-content: end;
     height: 30px;
-    /* border: 3px solid black; */
     background-color: rgb(230, 229, 227);
     width: 80px;
     margin-left: 50px;
-    cursor: default;
-   
-    
-    /* border-radius: 10%; */
-   
+    cursor: default; 
 }
 .display_button p{
     width: 50px;
     height: 25px;
     margin: 5px;
-    /* background-color: wheat; */
     text-align: cente;
     cursor: default;
-    
-    /* border: 3px solid black; */
 }
 .display_button button{
     height: 38px;
@@ -72,7 +59,6 @@
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    /* margin: 0px -20px; */
 }
 .nev{
     background-color: rgb(247, 167, 167);

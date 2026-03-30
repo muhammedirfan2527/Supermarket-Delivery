@@ -32,8 +32,6 @@ const Cart = () => {
   } 
 
   console.log(emptycart)
-  // const count = 0;
- 
   const notify = () => {
     toast.success('Your order is successful!', {
       position: "top-right",
@@ -49,8 +47,6 @@ const Cart = () => {
       ClearObject()
      
   };
-  // console.log(input)
-
   const placeOrder = async (event) =>{
     event.preventDefault()
     let orderitems = []
@@ -79,14 +75,12 @@ const Cart = () => {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
-              // 'Authorization': `Bearer ${token}` // Use Bearer if required
               'token': token
           },
           body: JSON.stringify(orderData)
         });
         
         if (response.ok) {
-          // const { data } = await response.json(); // Added await
           try {
             // clear cart
             await fetch("http://localhost:4000/api/cart/allremove",{
@@ -106,7 +100,6 @@ const Cart = () => {
         }
       } catch (error) {
         console.error("Fetch error:", error);
-        // alert("Something went wrong!");
       }
     }
       
@@ -141,7 +134,6 @@ const Cart = () => {
         })}
       </div>
       <div className="bail-place-order">
-          {/* <form onSubmit={placeOrder} className="place-order"> */}
         <div>
             <div className="place-order-left">
               <p className="title">Delivery Information</p>
@@ -150,7 +142,6 @@ const Cart = () => {
                 <input  type="text" name="lastName" onChange={onChangeHandler} value={data.lastName} placeholder="Last name" required/>
               </div>
               <input required type="email" name="email" onChange={onChangeHandler} value={data.email} placeholder="Email address"/>
-              {/* onChange={(event) => setInput({ ...input, email: event.target.value })} */}
               <input required type="text" name="street" onChange={onChangeHandler} value={data.street} placeholder="Street" />
               <div className="multi-fields">
                 <input required type="text" name="city" onChange={onChangeHandler} value={data.city} placeholder="City" />
@@ -202,17 +193,12 @@ const Cart = () => {
               {TotalAmount() === 0 ? 0 : TotalAmount() + 20 + tipnumber}
             </p>
           </div>
-          {/* <ToastContainer> */}
-          {/* <button onClick={() => input.email && input.pin ? notify() : alert("Enter in Delivery Information")}
- className={Object.keys(cartItems).length === 0 ? "aaaa" : "aaa"}>ORDER</button> */}
-
                 {ItemCount() !== 0 ?<button onClick={placeOrder}
  className="aaa">ORDER</button>:<button className="aaaa">ORDER</button>
 
 }
           <ToastContainer />
         </div>
-      {/* </form> */}
       </div>
     </div>
   );

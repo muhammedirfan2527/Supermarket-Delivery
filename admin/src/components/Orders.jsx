@@ -25,7 +25,6 @@ const Orders = () => {
                 headers:{'Content-Type': 'application/json'},
                 body: JSON.stringify({ orderId, status: event.target.value})
             });
-            //const data = await response.json()
             if(response.ok){
                 await fetchAllorders()
             }

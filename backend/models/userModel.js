@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-// import mongoose from 'mongoose'
 
 const userSchema = new mongoose.Schema({
     googleId:{
@@ -16,7 +15,6 @@ const userSchema = new mongoose.Schema({
     },
     password:{
         type:String,
-        // required:true
     },
     cartData:{
         type:Object,
@@ -29,4 +27,3 @@ const userSchema = new mongoose.Schema({
 },{timestamps:true})
  
 module.exports = mongoose.model('User',userSchema)
-// export default userModel

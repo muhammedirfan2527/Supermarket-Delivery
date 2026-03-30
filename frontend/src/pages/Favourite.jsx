@@ -6,12 +6,7 @@ import heartred from '../assets/redheart.jpg'
 
 const Favourite = () => {
     const {allproduct,cartItems, AddToCart, RemoveFromCart, favorite, WishList} = useContext(StoreContext)
-
-    // const checkfavorite = () =>{
-    //     if()
-    // }
     const checkfavorite = Object.values(favorite).filter(Boolean).length;
-    //Object.values(favorite).filter(Boolean).length;
     console.log(favorite)
     console.log(checkfavorite)
   return (
@@ -40,9 +35,7 @@ const Favourite = () => {
                       <button onClick={() => AddToCart(item._id)} className="pos">+</button>
                       
                     </div>
-                    {/* <p>{item.category}</p> */}
                   </div>
-                //   }
                 );
               }
             })}

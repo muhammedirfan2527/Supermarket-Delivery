@@ -31,7 +31,6 @@ const UpdateProduct = () => {
                 image:data.image || '',
             })
             setn
-            // setImage(`http://localhost:4000/uploads/${data.image}`)
             console.log(data)
         }catch(error){
             console.error('no', error.message)
@@ -114,10 +113,6 @@ const UpdateProduct = () => {
       </select>
       </div>
       <div className='addproduct-itemfield'>
-        {/* <label htmlFor='file-input'>
-            <img src={} />
-
-        </label> */}
         <p>Upload image</p>
         <input type="file" onChange={(e)=>setImage(e.target.files[0])} name="image" />
         <img src={image ?URL.createObjectURL(image):`http://localhost:4000/uploads/${getproduct.image}`} alt="" />

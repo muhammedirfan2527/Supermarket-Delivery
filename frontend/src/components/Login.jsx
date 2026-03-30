@@ -37,12 +37,9 @@ const Login = () => {
           localStorage.setItem("token",result.token)
           if(result.username){
             localStorage.setItem("username",result.username)
-            // console.log("loging"+result.username)
           }else{
             localStorage.setItem("username",result.user.name)
-            // console.log("resgister"+result.user.name)
           }
-          // console.log(result)
           window.location.replace("/")
         }
         else{
@@ -57,9 +54,7 @@ const Login = () => {
     const loginwithgoogle = () =>{
       window.open("http://localhost:4000/auth/google/callback","_self")
     }
-    // useEffect(()=>{
-    //   console.log(data)
-    // }, [data])
+
   return (
     <div className='login'>
       <form className='login-form'>
@@ -82,48 +77,8 @@ const Login = () => {
         </div>
         }
       </form>
-      {/* <button className='login-with-google-btn' onClick={loginwithgoogle}>
-        Sign in with google
-      </button> */}
     </div>
   )
 }
 
 export default Login
-
-
-// import React, { useState } from 'react'
-// import './LoginPopup.css'
-// import { assets } from '../../assets/assets'
-
-// const LoginPopup = ({setShowLogin}) => {
-//     const [currState,setCurrState] = useState("Login")
-//   return (
-//     <div className='login-popup'>
-//       <form className='login-popup-container'>
-//         <div className='login-popup-title'>
-//             <h2>{currState}</h2>
-//             <img onClick={()=>setShowLogin(false)} src={assets.cross_icon} alt="" />
-//         </div>
-//         <div className='login-popup-inputs'>
-//             {currState==="Login"?<></>:<input type="text" placeholder='Your name' required />}          
-//             <input type="email" placeholder='Your email' required />
-//             <input type="password" placeholder='password' required />
-//         </div>
-//         <button>{currState==="Sing Up"?"Create account":"Login"}</button>
-//         <div className='login-popup-condition'>
-//             <input type="checkbox" required/>
-//             <p>By continuing, I agree to the terms of use & privacy policy.</p>
-//         </div>
-//         {currState==="Login"
-//         ?<p>Create a new account? <span onClick={()=>setCurrState("Sign Up")} >Click here</span> </p>
-//         :<p>Already have an account? <span onClick={()=>setCurrState("Login")} >Login here</span> </p>
-//         }    
-//       </form>
-//     </div>
-//   )
-// }
-
-// export default LoginPopup
-
- 

@@ -5,7 +5,6 @@ const multer = require('multer')
 const getProduct = async (req,res) => {
     const product = await Product.find({}).sort({createAt:-1})
     res.status(200).json(product)
-    // console.log(product)
 }
 
 //get single product
@@ -25,8 +24,6 @@ const createProduct = async (req,res)=>{
     
     let lastproduct = await Product.findOne({}).sort({id:-1})
     const newId = lastproduct ? lastproduct.id + 1 : 1;
-    
-    // let image_filename = req.file? `${req.file.filename}`:null
     const image_filename = req.file ? req.file.filename : null;
     const {category,name,weight,image,price,measurement} = req.body
     try{

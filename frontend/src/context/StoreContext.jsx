@@ -1,60 +1,3 @@
-// import { createContext, useContext, useEffect, useState } from "react";
-// import { product_list } from "../assets/assets";
-
-// export const StoreContext = createContext(null)
-
-// const StoreContextProvider =(props) => {
-//     const [cartItems,setCartItems] = useState({})
-//     const AddToCart = (id)=>{
-//         if(!cartItems[id]){
-//             setCartItems((prv)=> ({...prv,[id]:1}))
-//         }else{
-//             setCartItems((prv)=> ({...prv,[id]:prv[id]+1}))
-//         }
-//     }
-
-//     const RomveFormCart = (id)=>{
-//         if(cartItems[id] > 0){
-//             setCartItems((prv)=> ({...prv,[id]:prv[id]-1}))
-//         }
-//     }
-
-
-//     useEffect(()=>{
-//         console.log(cartItems)
-//     },[cartItems])
-
-//     //   const [search,setSearch] = useState("")
-//       const [filtereddata,setFiltereddata] = useState([])
-
-//       const searchfuntion =()=>{
-//         useEffect(()=>{
-//             const newfiltereddata = product_list.filter((value)=>{
-//               return value.name.toLowerCase().includes(search)
-//             })
-//             setFiltereddata(newfiltereddata)
-//             console.log(newfiltereddata)
-//           },[product_list, search])
-//       }
-    
-      
-
-//     const contextvalue = {
-//         product_list,
-//         cartItems,
-//         AddToCart,
-//         RomveFormCart,
-//         searchfuntion
-//     }
-//     return (
-//         <StoreContext.Provider value={contextvalue}>
-//             {props.children}
-//         </StoreContext.Provider>
-//     )
-// }
-// export default StoreContextProvider
-
-
 import { createContext, useEffect, useState } from "react";
 import { product_list } from "../assets/assets";
 
@@ -68,10 +11,6 @@ const StoreContextProvider = (props) => {
   const [favorite,setFavorite] = useState({})
   const [token,setToken] = useState("")
   const [username,setUsername] = useState("")
-
-  // console.log(cartItems)
-  // console.log(allproduct)
-  // console.log(token)
   const fetchInfo = async ()=>{
     try{
       const response = await fetch('http://localhost:4000/api/workout/')
@@ -86,8 +25,6 @@ const StoreContextProvider = (props) => {
       console.log({error:error.message})
     }
   }
-  
-  // console.log(token)
   useEffect(()=>{
     fetchInfo();
   },[]);
@@ -190,19 +127,12 @@ const loadFavouriteData = async (token) =>{
 
   const TotalAmount = () =>{
     let amount = 0
-    // let itemcount = 0
     for(const item in cartItems){
       if(cartItems[item] > 0){
         const getitem = allproduct.find((id)=> id._id===item)
         amount += getitem.price * cartItems[item]
-        // itemcount++
-        
-        // console.log(count)
       }
     }
-    // setCount(itemcount)
-    // console.log(amount)
-    // console.log(count)
     return amount;
   }
   const ItemCount = ()=>{
@@ -212,25 +142,14 @@ const loadFavouriteData = async (token) =>{
         count++
       }
     }
-    // console.log(count)
     return count
   }
-
-  // const getorder = ()=>{
-  //   console.log(Object.keys(cartItems).length)
-  //   return Object.keys(cartItems).length
-  // }
-
   const searchFunction = (query) => {
     console.log("Search Query:", query);
-    // if (!query) {
-    //   setFilteredData(allproduct);
-    // } else {
       const filtered = allproduct.filter((item) =>
         item.name.toLowerCase().includes(query.toLowerCase())
       );
       setFilteredData(filtered);
-    // }
   };
 
   const ClearObject = ()=>{
@@ -277,12 +196,8 @@ const loadFavouriteData = async (token) =>{
         wcount++
       }
     }
-    // console.log(wcount)
     return wcount
   }
-  //Object.values(favorite).filter(Boolean).length;
-  
-  // console.log(favorite)
 
   const logoutHandler = ()=>{
     localStorage.removeItem("token")
@@ -293,7 +208,6 @@ const loadFavouriteData = async (token) =>{
   }
 
   const contextValue = {
-  //  allproduct: filteredData,
     allproduct:filteredData,
     cartItems,
     AddToCart,
@@ -310,7 +224,6 @@ const loadFavouriteData = async (token) =>{
     username,
     setUsername,
     logoutHandler,
-    // getorder
   };
 
   return (

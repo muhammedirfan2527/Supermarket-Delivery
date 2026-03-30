@@ -12,11 +12,6 @@ const WishList = async (req, res) => {
 
         let favouriteData = userData.favouriteData || {};
 
-        // Ensure favouriteData is an object
-        // if (typeof favouriteData !== "object" || Array.isArray(favouriteData)) {
-        //     favouriteData = {};
-        // }
-
         // Add the item to the object (key-value pair)
         if(favouriteData[itemId]){
             delete favouriteData[itemId]

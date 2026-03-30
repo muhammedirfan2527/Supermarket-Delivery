@@ -50,17 +50,6 @@ const removeFromCart = async (req,res)=>{
     }
 }
 
-// const allRemoveFromCart = async (req,res) =>{
-//     try {
-//         let userData = await user.findById(req.body.userId)
-//         let cartData = await userData.cartData
-
-//         await user.findByIdAndDelete(req.body.userId, {cartData})
-//     } catch (error) {
-//         console.log(error)
-//         res.json({success:false,message:"error"})
-//     }
-// }
 
 const allRemoveFromCart = async (req, res) => {
     try {
@@ -76,13 +65,7 @@ const allRemoveFromCart = async (req, res) => {
         if( cartData){
             cartData = {}
         }
-        // else{
-        //     console.log("error")
-        // }
-
         await user.findByIdAndUpdate(userId, { cartData }, { new: true });
-        // await user.findByIdAndUpdate(userId, { cartData: [] });
-
         res.json({ success: true, message: "Cart cleared successfully" });
     } catch (error) {
         console.error("Error in allRemoveFromCart:", error);

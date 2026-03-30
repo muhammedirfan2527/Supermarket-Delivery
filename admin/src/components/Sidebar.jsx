@@ -1,23 +1,6 @@
-// import React from 'react'
-// import './Sidebar.css'
-// import { Link } from 'react-router-dom'
-
-// const Sidebar = () => {
-//   return (
-//     <div className='sidebar'>
-
-//       <Link to='/addproduct'><p>Add Product</p></Link>
-//       <Link to='/listproduct'><p>List Product</p></Link>
-//     </div>
-//   )
-// }
-
-// export default Sidebar
-
-
 import React from 'react';
 import './Sidebar.css';
-import { NavLink } from 'react-router-dom';  // Import NavLink
+import { NavLink } from 'react-router-dom';  
 
 const Sidebar = () => {
   return (

@@ -37,16 +37,8 @@
     cursor: pointer;
     transition: background 0.3s ease;
 }
-
-/* .cartheader button:hover {
-    background: #d93636;
-} */
-
 .bail{
-    /* margin-left: 800px; */
     margin-top: 200px;
-    /* background-color: aqua; */
-    /* border: 3px solid; */
     width: 300px;
 }
 .bail .aaa{
@@ -57,7 +49,6 @@
     border: 0px;
     background-color: tomato;
     color: white;
-    /* margin-top: 20px; */
 }
 .bail .aaaa{
     margin-left: 30px;
@@ -68,7 +59,6 @@
     background-color: gray;
     color: white;
     cursor: pointer;
-    /* margin-top: 20px; */
 }
 .bail .tip{
     width: 20px;
@@ -84,15 +74,12 @@
     border: none;
     color: white;
     border-radius: 5%;
-    /* margin-top: 5px; */
-
 }
 .bail span{
     margin-left: 30px;
     align-items: end;
 }
 .bail p{
-    /* border: 3px solid; */
     margin-top: 0px;
 }
 .cart-total-details{
@@ -103,7 +90,6 @@
     margin-right: 34px;
 }
 .tipnumber span{
-    /* background-color: aqua; */
     display: flex;
     flex-direction: column;
     margin-top: -30px;
@@ -140,12 +126,9 @@
 .bail-place-order{
     display: flex;
     justify-content: space-around;
-    /* border: 3px solid; */
     height: 600px;
 }
 .bail-place-order form{
-    /* background-color: aqua; */
-    /* width: 300px; */
     margin-left: 30px;
 }
 @media (max-width: 768px) {

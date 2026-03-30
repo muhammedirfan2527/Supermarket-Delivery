@@ -17,9 +17,6 @@ const App = () => {
         <Route path='/favourite' element={<Favourite />} />
         <Route path='myorder' element={<Myorder />} />
       </Routes>
-        {/* <GoogleOAuthProvider clientId="622165410918-ug13o811dharhot680bp22avsig9ig2u.apps.googleusercontent.com">
-      <Login />
-    </GoogleOAuthProvider> */}
     </div>
   )
 }

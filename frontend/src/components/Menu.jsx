@@ -44,7 +44,6 @@ const Menu = ({category,setCategory}) => {
             manu_image: Snacks
         },
     ])
-    // const [category,setCategory] = useState("All")
   return (
     <div className='menu'>
       {

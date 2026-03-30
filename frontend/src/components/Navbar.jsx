@@ -10,23 +10,6 @@ import { FaSearch, FaHeart, FaShoppingCart, FaUser, FaSignOutAlt } from 'react-i
 const Navbar = () => {
     const { searchFunction, ItemCount, WhisListCount, token, setToken, username, logoutHandler, setUsername } = useContext(StoreContext);
     const [userdata, setUserdata] = useState({});
-
-    // const getUser = async () => {
-    //     try {
-    //         const response = await fetch("http://localhost:4000/login/sucess", { withCredentials: true });
-    //         const data = await response.json();
-    //         if (data.user) {
-    //             setUserdata(data.user);
-    //         }
-    //     } catch (error) {
-    //         console.error("Error fetching user:", error);
-    //     }
-    // };
-
-    // useEffect(() => {
-    //     getUser();
-    // }, []);
-
     useEffect(() => {
         const storeUsername = localStorage.getItem("username");
         setUsername(storeUsername);

@@ -1,53 +1,3 @@
-// import React, { useEffect, useState } from 'react'
-// import './ListProduct.css'
-
-// const ListProduct = () => {
-//   const [allproduct,setAllproduct] = useState([]);
-
-//   const fetchInfo = async () => {
-//     try {
-//       const response = await fetch('http://localhost:4000/api/workout/');
-//       if (!response.ok) throw new Error('Failed to fetch data');
-//       const data = await response.json();
-//       setAllproduct(data);
-//     } catch (error) {
-//       console.error('Error fetching products:', error.message);
-//     }
-//   };
-//   useEffect(()=>{
-//     fetchInfo();
-//   },[])
-// console.log(allproduct)
-//   return (
-//     <div className='listProduct'>
-//       <div className='header-list'>
-//         <p>Image</p>
-//         <p>Product Category</p>
-//         <p>Name</p>
-//         <p>Price</p>
-//         <p>Measurement</p>
-//       </div>
-//       <div>
-//         {
-//           allproduct.map((data)=>{
-//             return <>
-//             <div>
-//               <img src={data.image} alt="" />
-//               <p>{data.category}</p>
-//               <p>{data.name}</p>
-//               <p>{data.price}</p>
-//               <p>{data.measurement}</p>
-//             </div>
-//             </>
-//           })
-//         }
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default ListProduct
-
 import React, { useEffect, useState } from 'react';
 import './ListProduct.css';
 import {Link} from 'react-router-dom'
@@ -62,7 +12,6 @@ const ListProduct = () => {
 
   console.log(allProducts.name)
  
-  // Function to fetch data
   const fetchInfo = async () => {
     try {
       const response = await fetch('http://localhost:4000/api/workout/');
@@ -75,7 +24,6 @@ const ListProduct = () => {
     }
   };
 
-  // Fetch data when component mounts
   useEffect(() => {
     fetchInfo();
   }, []);

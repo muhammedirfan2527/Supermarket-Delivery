@@ -21,8 +21,6 @@ const AddProduct = () => {
 
   const handlesubmit = async (event) => {
     event.preventDefault()
-
-    // const product = {...addproduct,image};
     const formData = new FormData();
     formData.append("category", addproduct.category)
     formData.append("name",addproduct.name)
@@ -55,7 +53,6 @@ const AddProduct = () => {
       if (fileInputRef.current) {
         fileInputRef.current.value = "";
       }
-      // document.getElementById("fileInput").value = "";
     }else{
       alert("Enter product")
       console.log("Enter product",)
@@ -67,7 +64,6 @@ const AddProduct = () => {
   }
   }
 console.log(addproduct)
-// console.log(image)
 
   return (
     <div className='addproduct'>
@@ -106,10 +102,6 @@ console.log(addproduct)
       </select>
       </div>
       <div className='addproduct-itemfield'>
-        {/* <label htmlFor='file-input'>
-            <img src={} />
-
-        </label> */}
         <p>Upload image</p>
         <input type="file" ref={fileInputRef} onChange={(e)=>setImage(e.target.files[0])} name="image" />
         <img src={image?URL.createObjectURL(image):icon_image} alt="" />
